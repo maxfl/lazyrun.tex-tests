@@ -1,0 +1,3 @@
+[submodule "lazyrun.tex"]
+	path = lazyrun.tex
+	url = https://github.com/maxfl/lazyrun.tex.git

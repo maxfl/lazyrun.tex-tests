@@ -1,0 +1,36 @@
+\documentclass[10pt,a4paper]{beamer}
+
+\usepackage{lazyrun}
+
+\begin{document}
+\begin{frame}[label=current]{Test lazyload}
+  \only<1>{A}
+  \only<2>{B}
+  \only<3>{C}
+
+  \lazyrun{\mycommand}{inputfile.tex}
+
+  \lazyrun{\mycommand}{inputfile.tex}
+
+  \lazyrun{\mycommand}{inputfile.tex}
+\end{frame}
+
+\frame{Try all}
+\lazyrun{\myframe}{inputframe.tex}
+
+\frame{Try 1}
+\lazyrun{\myframe<1>}{inputframe.tex}
+
+\frame{Try 1-2}
+\lazyrun{\myframe<1-2>}{inputframe.tex}
+
+\frame{Try 1-3}
+\lazyrun{\myframe<1-3>}{inputframe.tex}
+
+\frame{Try 2-}
+\lazyrun{\myframe<2->}{inputframe.tex}
+
+\frame{Try 2-, not lazy}
+\myframe<2->
+
+\end{document}
